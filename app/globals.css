@@ -1,21 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.ql-container {
+  background: #fff;
+  border-radius: 0 0 4px 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.ql-toolbar {
+  background: #e5e6e6;
+  border: 1px solid red;
+  border-radius: 4px 4px 0 0;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom: none;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.ql-editor {
+  min-height: 200px;
+}
+
+.ql-editor::selection {
+  color: #000;
+}
+
+.ql-container {
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+}
+
+.ql-toolbar {
+  background: #e5e6e6;
+  border: 1px solid red;
+  border-radius: 4px 4px 0 0;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom: none;
+}
+
+.ql-editor {
+  min-height: 200px;
+}
+
+.ql-editor::selection {
+  color: #000;
 }
