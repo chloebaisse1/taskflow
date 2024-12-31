@@ -69,7 +69,7 @@ const page = ({ params }: { params: Promise<{ projectId: string }> }) => {
       }
       setTaskCounts(counts)
     }
-  }, [params])
+  }, [project])
 
   const filteredTasks = project?.tasks?.filter((task) => {
     const statusMatch = !statusFilter || task.status == statusFilter
@@ -120,7 +120,7 @@ const page = ({ params }: { params: Promise<{ projectId: string }> }) => {
                     setAssignedFilter(false)
                   }}
                   className={`btn btn-sm ${
-                    !statusFilter && !assignedFilter ? "btn-primary" : ""
+                    !statusFilter ? "btn-primary" : ""
                   } `}
                 >
                   <SlidersHorizontal className="w-4" /> Tous (
@@ -135,7 +135,7 @@ const page = ({ params }: { params: Promise<{ projectId: string }> }) => {
                     statusFilter === "To Do" ? "btn-primary" : ""
                   } `}
                 >
-                  <ListTodo className="w-4" />A faire ({taskCounts.todo})
+                  <ListTodo className="w-4" /> A faire ({taskCounts.todo})
                 </button>
 
                 <button
